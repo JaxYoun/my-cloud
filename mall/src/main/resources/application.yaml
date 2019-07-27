@@ -13,3 +13,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:kkk@localhost:5050/eureka/
+
+feign:
+  hystrix:
+    enabled: true

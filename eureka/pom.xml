@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>eureka</artifactId>
-    <version>${version}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>eureka</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>

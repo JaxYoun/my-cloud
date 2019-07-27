@@ -1,9 +1,9 @@
+server:
+  port: 7070
+
 spring:
   application:
-    name: order-service
-
-server:
-  port: 9091
+    name: point-service
 
 eureka:
   instance:

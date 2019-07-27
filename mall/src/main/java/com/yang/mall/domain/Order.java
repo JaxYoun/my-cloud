@@ -1,4 +1,4 @@
-package com.yang.mall.controller.restTemplate;
+package com.yang.mall.domain;
 
 import lombok.Data;
 
