@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order-service
+
+server:
+  port: 9090
+
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: http://admin:kkk@localhost:5050/eureka/

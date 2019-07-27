@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: mall
+
+server:
+  port: 8080
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    metadata-map:
+      my-meta: yangMeta
+  client:
+    service-url:
+      defaultZone: http://admin:kkk@localhost:5050/eureka/

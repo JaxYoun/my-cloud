@@ -1,0 +1,21 @@
+server:
+  port: 5050
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否将本服务注册到eureka服务器，由于本服务就是eureka服务器，所以不需要
+    register-with-eureka: false
+    #是否从eureka服务器拉取服务信息，由于本服务就是eureka服务器，所以不需要
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+
+spring:
+  security:
+    user:
+      name: admin
+      password: kkk
