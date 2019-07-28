@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: web-api
+
+server:
+  port: 8080
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    metadata-map:
+      my-meta: yangMeta
+  client:
+    service-url:
+      defaultZone: http://admin:kkk@localhost:5050/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    root: info
