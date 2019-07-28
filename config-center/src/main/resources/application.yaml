@@ -8,6 +8,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JeansYoung/my-cloud-config.git
-          username: 315201741@qq.com
-          password: YANG2008liwan
+          uri: https://github.com/JaxYoun/spring-cloud-config-center-file.git
+          username:
+          password:

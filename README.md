@@ -15,5 +15,7 @@
 .......由于Feign定义的是接口，所以无法在接口中编写回退方法，
 此时有两种方法解决：1.需要给接口添加回退工厂类，并用@FeignClient接口的fallbackFactory属性指定该回退工厂就可以，并在工厂返回的实现类中实现接口的方法，即可达成为Feign接口指定回退方法的目的。
 2.定义一个Feign接口的实现类，并用@FeignClient接口的fallback属性指定该实现类就可以
-. Hystrix-Metrics-
+. Hystrix-Metrics-OK：接通了dashboard，但是有些细节没搞
+. Zuul-OK：可以用，但是高级机制需要研究
+. Config-center-client-OK分别实现了从浏览器、client获取git配置的功能呢，尚未集成到其他项目中
 ---
