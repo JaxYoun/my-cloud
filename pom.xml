@@ -16,6 +16,8 @@
 
     <modules>
         <module>eureka</module>
+        <module>zuul</module>
+        <module>config-center</module>
         <module>web-api</module>
         <module>mobil-api</module>
         <module>order-service</module>

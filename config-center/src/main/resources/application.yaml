@@ -1,0 +1,13 @@
+server:
+  port: 4040
+
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JeansYoung/my-cloud-config.git
+          username: 315201741@qq.com
+          password: YANG2008liwan
