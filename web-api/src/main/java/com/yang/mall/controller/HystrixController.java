@@ -17,7 +17,7 @@ import java.util.Date;
  * @description:
  */
 @RestController
-@RequestMapping("/hystrix")
+@RequestMapping("/hystrixTest")
 public class HystrixController {
 
     @Resource
