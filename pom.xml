@@ -21,6 +21,7 @@
         <module>config-client</module>
         <module>web-api</module>
         <module>mobil-api</module>
+        <module>file-service</module>
         <module>order-service</module>
         <module>point-service</module>
     </modules>

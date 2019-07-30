@@ -4,10 +4,15 @@ server:
 spring:
   application:
     name: config-center
+  security:
+    user:
+      name: admin
+      password: kkk
   cloud:
     config:
       server:
         git:
           uri: https://github.com/JaxYoun/spring-cloud-config-center-file.git
-          username:
-          password:
+          username: gao88jie@qq.com
+          password: YANG2008liwan
+

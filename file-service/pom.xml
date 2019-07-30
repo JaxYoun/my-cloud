@@ -9,13 +9,15 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>point-service</artifactId>
+    <groupId>com.yang</groupId>
+    <artifactId>file-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>point-service</name>
+    <name>file-service</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

@@ -19,3 +19,5 @@
 . Zuul-OK：可以用，但是高级机制需要研究
 . Config-center-client-OK分别实现了从浏览器、client获取git配置的功能呢，尚未集成到其他项目中
 ---
+## web-api和mobile-api分别为web端和移动端提供聚合接口。
+添加了文件服务，其支持大文件上传功能。Zuul使用OkHttp3。配置中心添加Basic认证。

@@ -1,0 +1,17 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: file-service
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2500MB
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://admin:kkk@localhost:5050/eureka/

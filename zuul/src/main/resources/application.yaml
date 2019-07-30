@@ -9,3 +9,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:kkk@localhost:5050/eureka
+
+# 网关使用OkHttpClient
+ribbon:
+  okhttp:
+    enabled: true
+  ConnectTimeout: 30000
+  ReadTimeout: 60000
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000

@@ -1,4 +1,4 @@
-package com.yang.eureka.config;
+package com.yang.configcenter.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,7 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //默认情况下spring-security开启了csrf，要注册成功，需要手动关闭
-        http.httpBasic().realmName("Welcome to Eureka");
+        http.httpBasic().realmName("Welcome to Config-Center");
         http.csrf().disable();
         http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
     }
