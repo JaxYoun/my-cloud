@@ -1,0 +1,7 @@
+server:
+  port: 9090
+
+spring:
+  thymeleaf:
+    # 开发调试中要实现Thymeleaf页面的实时刷新，首先要关闭页面缓存，且修改页面后要重新编译页面
+    cache: false
