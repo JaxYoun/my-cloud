@@ -61,5 +61,4 @@ public class InMemoryController {
         log.error(authentication.getAuthorities().toString());
     }
 
-
 }

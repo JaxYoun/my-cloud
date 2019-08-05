@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author: Yang
  * @date: 2019/8/5 01:00
- * @description:
+ * @description: user po类
  */
 @Data
 public class User {

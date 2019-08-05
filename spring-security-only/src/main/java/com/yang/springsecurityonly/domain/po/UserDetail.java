@@ -13,32 +13,26 @@ import java.util.stream.Collectors;
  * @date: 2019/8/5 00:59
  * @description:
  */
-public class UserDetail implements UserDetails {
-
-    private User user;
-
-    public UserDetail(User user) {
-        this.user = user;
-    }
+public class UserDetail extends User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.user.getRoleList().stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+        return super.getRoleList().stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
 
     @Override
     public String getPassword() {
-        return this.user.getPassword();
+        return super.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return this.user.getName();
+        return super.getName();
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        Date accountExpireTime = this.user.getAccountExpireTime();
+        Date accountExpireTime = super.getAccountExpireTime();
         if (accountExpireTime == null) {
             return true;
         } else {
@@ -48,7 +42,7 @@ public class UserDetail implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        Integer unLocked = this.user.getUnLocked();
+        Integer unLocked = super.getUnLocked();
         if (unLocked == null) {
             return true;
         } else {
@@ -58,7 +52,7 @@ public class UserDetail implements UserDetails {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        Date credentialExpireTime = this.user.getCredentialExpireTime();
+        Date credentialExpireTime = super.getCredentialExpireTime();
         if (credentialExpireTime == null) {
             return true;
         } else {
@@ -68,7 +62,7 @@ public class UserDetail implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        Integer enabled = this.user.getEnabled();
+        Integer enabled = super.getEnabled();
         if (enabled == null) {
             return true;
         } else {

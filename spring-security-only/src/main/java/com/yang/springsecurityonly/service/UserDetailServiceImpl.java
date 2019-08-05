@@ -2,6 +2,7 @@ package com.yang.springsecurityonly.service;
 
 import com.yang.springsecurityonly.domain.po.User;
 import com.yang.springsecurityonly.domain.po.UserDetail;
+import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -56,7 +57,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
     }
 
     private UserDetails convertUserToUserDetail(User user) {
-        return new UserDetail(user);
+        UserDetail userDetail = new UserDetail();
+        BeanUtils.copyProperties(user, userDetail);
+        return userDetail;
     }
 
 }

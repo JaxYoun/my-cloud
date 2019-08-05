@@ -14,11 +14,11 @@ import javax.annotation.Resource;
 
 /**
  * @author: Yang
- * @date: 2019/8/5 00:52
- * @description: 用户自定义认证管理器
+ * @date: 2019/8/6 22:12
+ * @description: 实际的-用户自定义认证管理器
  */
-//@Configuration
-public class CustomizedSecurityConfig extends WebSecurityConfigurerAdapter {
+@Configuration
+public class MyCustomizedSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Resource
     private UserDetailsService userDetailsService;
@@ -46,19 +46,6 @@ public class CustomizedSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        /*---这是adapter抽象类的默认实现
-        //1.开启对请求的权限验证器
-        http.authorizeRequests()
-        //2.对所有请求
-        .anyRequest()
-        //3.需要通过认证才可访问
-        .authenticated()
-        //4.使用Spring-Security内置的登录页面
-        .and().formLogin()
-        //5.启用浏览器的http基础认证
-        .and().httpBasic();
-        */
-
         ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry registry = http.authorizeRequests();
         registry.antMatchers("/admin/**").hasAnyRole("admin");
         registry.antMatchers("/order/**").hasAnyRole("user");
